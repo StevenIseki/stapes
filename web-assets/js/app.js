@@ -8,7 +8,6 @@ window.App = (function() {
             this.addSyntaxHighlighting();
             this.addScrollspy();
         },
-
         addAffix : function() {
             this.$toc.affix({
                 offset : {
@@ -16,14 +15,12 @@ window.App = (function() {
                 }
             });
         },
-
         addScrollspy : function() {
             $("body").scrollspy({
                 offset : 80,
                 target : '#toc .nav'
             });
         },
-
         addSyntaxHighlighting : function() {
             $("pre").each(function() {
                 $(this).attr('data-language', 'javascript');
@@ -33,8 +30,6 @@ window.App = (function() {
         createToc : function() {
             var menu = [];
             var first = true;
-
-            // This could be better :)
             var $headings = this.$content.find("h3, h4");
             var headingsCount = $headings.length - 1;
 
